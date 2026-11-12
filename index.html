@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="دعوة زفاف سعد وفاطمة">
+  <title>سعد ♥ فاطمة | دعوة زفاف</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="weddingAudio" preload="auto" src="assets/wedding-song.mp3"></audio>
+  <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+
+  <main>
+    <!-- صفحة البسملة فقط: المجسم الثلاثي الأبعاد موجود هنا وحدها -->
+    <section class="cover-screen" id="coverScreen" aria-label="صفحة البسملة">
+      <div class="cover-card">
+        <div class="top-ornament" aria-hidden="true">✧ ❧ ✧</div>
+        <div class="basmala-ring">
+          <p class="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        </div>
+        <img class="figurine" src="assets/cover-couple.webp" alt="مجسم ثلاثي الأبعاد لعريس ببدلة سوداء وعروسة بفستان أبيض يمسكان بأيدي بعضهما">
+        <p class="cover-caption">بكل الحب ندعوكم لمشاركتنا فرحتنا</p>
+        <button class="open-button" id="openInvitation" type="button">افتح دعوتنا <span aria-hidden="true">♡</span></button>
+        <div class="bottom-ornament" aria-hidden="true">❧</div>
+      </div>
+    </section>
+
+    <!-- الدعوة الحقيقية: لا يظهر فيها المجسم، وتظهر صورة سعد وفاطمة الأصلية كاملة -->
+    <section class="invitation-screen" id="invitationScreen" hidden>
+      <header class="photo-header">
+        <img class="couple-photo" src="assets/couple-background.jpg" alt="صورة سعد وفاطمة">
+        <div class="photo-caption">
+          <p class="small-blessing">بارك الله لهما وبارك عليهما وجمع بينهما في خير</p>
+          <div class="names"><span>سعد</span><b>♥</b><span>فاطمة</span></div>
+        </div>
+      </header>
+
+      <section class="invitation-card">
+        <div class="divider">✧ ── ♡ ── ✧</div>
+        <p class="family-intro">يتشرف كلٌّ من</p>
+        <p class="family-name">آل سلامة</p>
+        <span class="and">و</span>
+        <p class="family-name">آل هيبة</p>
+        <p class="invite-text">بدعوتكم لحضور حفل زفاف</p>
+        <div class="names names-card"><span>سعد</span><b>♥</b><span>فاطمة</span></div>
+        <div class="gold-rule"></div>
+        <div class="event-grid">
+          <div class="event-item">
+            <span class="event-icon" aria-hidden="true">✧</span>
+            <span class="event-label">اليوم والتاريخ</span>
+            <strong>الجمعة</strong>
+            <strong>4 ديسمبر 2026</strong>
+          </div>
+          <div class="event-item">
+            <span class="event-icon" aria-hidden="true">◷</span>
+            <span class="event-label">موعدنا</span>
+            <strong>من 5 مساءً</strong>
+            <strong>إلى 11 مساءً</strong>
+          </div>
+          <div class="event-item venue-item">
+            <span class="event-icon" aria-hidden="true">⌖</span>
+            <span class="event-label">مكان الحفل</span>
+            <strong>فيلا نعمة</strong>
+            <strong>الجيزة</strong>
+          </div>
+        </div>
+        <p class="closing-note">نسعد بوجودكم ومشاركتكم فرحتنا</p>
+        <!-- أضف رابط الخريطة لاحقًا في script.js عند توفر اللوكيشن الصحيح -->
+        <a class="map-link" id="mapLink" hidden target="_blank" rel="noopener">موقع القاعة على الخريطة</a>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

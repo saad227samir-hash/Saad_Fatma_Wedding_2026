@@ -1,0 +1,127 @@
+:root {
+  --champagne: #c5a36a;
+  --champagne-light: #e7d5b4;
+  --cream: #f8f2e8;
+  --offwhite: #fffdf9;
+  --ink: #292724;
+  --rose: #a83e43;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-height: 100vh; background: #fff; color: var(--ink); font-family: Cairo, sans-serif; }
+button { font: inherit; }
+[hidden] { display: none !important; }
+
+/* First page: pure white and wedding-like */
+.cover-screen {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 22px 16px;
+  background: #fff;
+}
+.cover-card {
+  width: min(620px, 100%);
+  min-height: min(900px, calc(100svh - 44px));
+  padding: 24px clamp(16px, 4vw, 34px) 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(197,163,106,.5);
+  outline: 1px solid rgba(197,163,106,.22);
+  outline-offset: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+.top-ornament, .bottom-ornament { color: var(--champagne); font-family: Amiri, serif; font-size: 25px; letter-spacing: 7px; }
+.basmala-ring {
+  width: min(340px, 86vw);
+  aspect-ratio: 1.9 / 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--champagne-light);
+  border-radius: 50%;
+  position: relative;
+  margin: 4px 0 0;
+}
+.basmala-ring::before { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(197,163,106,.35); border-radius: 50%; }
+.basmala { margin: 0; padding: 0 10px; color: #987747; font: 700 clamp(25px, 5.8vw, 39px)/1.5 "Aref Ruqaa", Amiri, serif; position: relative; }
+.figurine {
+  display: block;
+  width: min(440px, 88vw);
+  max-height: 48svh;
+  object-fit: contain;
+  margin: 8px auto 0;
+  filter: drop-shadow(0 12px 18px rgba(120,94,55,.10));
+}
+.cover-caption { color: #8e7652; font: 400 clamp(19px, 4vw, 25px)/1.7 Amiri, serif; margin: 5px 0 13px; }
+.open-button {
+  border: 1px solid #b89559;
+  color: #fffdf8;
+  background: linear-gradient(115deg, #b89559, #ead8b3 48%, #b89559);
+  border-radius: 999px;
+  padding: 11px 34px;
+  min-width: 190px;
+  box-shadow: 0 8px 22px rgba(169,132,73,.18), inset 0 1px 0 rgba(255,255,255,.65);
+  font: 600 18px Cairo, sans-serif;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.open-button:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(169,132,73,.24); }
+.open-button span { margin-inline-start: 7px; color: #fff8e9; }
+.bottom-ornament { margin-top: 7px; font-size: 22px; }
+
+/* Main invitation */
+.invitation-screen { min-height: 100svh; background: linear-gradient(180deg, #fffdf9, #f5ecdf); padding-bottom: 50px; }
+.photo-header { width: 100%; background: #f4eadc; }
+.couple-photo { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; object-position: center; }
+.photo-caption {
+  text-align: center;
+  padding: 22px 16px 18px;
+  background: linear-gradient(180deg, #f7efe3, #fffdf9);
+  border-bottom: 1px solid rgba(197,163,106,.3);
+}
+.small-blessing { color: #9b7a4a; font: 400 clamp(19px, 4vw, 27px)/1.7 Amiri, serif; margin: 0 0 2px; }
+.names { display: flex; justify-content: center; align-items: center; gap: 18px; direction: rtl; font: 700 clamp(43px, 9vw, 68px)/1.3 Amiri, serif; }
+.names span { color: var(--ink); }
+.names b { color: var(--champagne); font-size: .8em; font-weight: 400; }
+.invitation-card {
+  width: min(820px, calc(100% - 30px));
+  margin: 28px auto 0;
+  padding: clamp(26px, 5vw, 48px) clamp(18px, 5vw, 54px);
+  text-align: center;
+  background: rgba(255,253,249,.95);
+  border: 1px solid rgba(197,163,106,.62);
+  box-shadow: 0 18px 55px rgba(120,93,53,.09);
+  position: relative;
+}
+.invitation-card::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(197,163,106,.23); pointer-events: none; }
+.divider { color: var(--champagne); font: 24px Amiri, serif; margin-bottom: 13px; }
+.family-intro, .invite-text { color: #9a7b4d; font: 400 22px Amiri, serif; margin: 10px 0; }
+.family-name { color: #6f5737; font: 700 27px Amiri, serif; margin: 0; }
+.and { color: var(--champagne); display: block; margin: 0; }
+.names-card { margin: 7px 0 13px; font-size: clamp(42px, 8vw, 60px); }
+.gold-rule { width: min(330px, 80%); height: 1px; margin: 20px auto 24px; background: linear-gradient(90deg, transparent, var(--champagne), transparent); }
+.event-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.event-item { min-height: 150px; padding: 17px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; background: linear-gradient(160deg, #fffdf9, #f8f0e4); border: 1px solid rgba(197,163,106,.35); border-radius: 15px; }
+.event-icon { color: var(--champagne); font: 28px Amiri, serif; }
+.event-label { color: #a68b62; font-size: 13px; }
+.event-item strong { color: #665238; font: 700 17px Amiri, serif; }
+.closing-note { color: #9b7a4a; font: 400 21px Amiri, serif; margin: 25px 0 0; }
+.map-link { color: #927044; text-decoration: underline; display: inline-block; margin-top: 12px; }
+
+/* Gentle red rose petals, only after opening the invitation */
+.petal-layer { pointer-events: none; position: fixed; inset: 0; overflow: hidden; z-index: 20; }
+.petal { position: absolute; top: -24px; width: 10px; height: 16px; border-radius: 90% 8% 90% 8%; background: linear-gradient(145deg, #d77a78, #8e252e 70%); opacity: .62; box-shadow: 0 1px 3px rgba(90,20,25,.12); animation: petal-fall linear forwards; }
+@keyframes petal-fall { to { transform: translate3d(var(--drift), 108vh, 0) rotate(640deg); opacity: .08; } }
+@media (max-width: 620px) {
+  .cover-card { min-height: calc(100svh - 44px); padding-top: 18px; padding-bottom: 14px; }
+  .figurine { width: min(400px, 94vw); max-height: 46svh; }
+  .cover-caption { margin-top: 2px; margin-bottom: 10px; }
+  .event-grid { grid-template-columns: 1fr; gap: 9px; }
+  .event-item { min-height: 112px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
